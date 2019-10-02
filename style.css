@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
+.rares {
+	font-size : 20em;
+	text-align : center;
+}
+.vlad {
+    font-size : 20em;
+	text-align : center;
+}
+.rares2 {
+    font-size : 7em;
+	text-align : center;
+}
+.vlad2 {
+    font-size : 7em;
+	text-align : center;
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 100px;
+    grid-gap: 10px;
+}
+
