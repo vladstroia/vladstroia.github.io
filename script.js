@@ -15,7 +15,9 @@ function keyDownTextField(e) {
 	    else
 		  if(keyCode==82){// pentru tasta "r"
 		 	scor_vlad=0;
-			scor_rares=0;
+            scor_rares=0;
+		    meci_vlad = 0;
+			meci_rares = 0;
 		  }
 		  else
 			if(keyCode==74){//pentru "j"
