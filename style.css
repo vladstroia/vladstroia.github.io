@@ -1,21 +1,35 @@
+body {
+    background-color: black;
+	color : white;
+}
+
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+
 * {
   box-sizing: border-box;
 }
 
 .rares {
-	font-size : 20em;
+	font-size : 25em;
 	text-align : center;
 }
 .vlad {
-    font-size : 20em;
+    font-size : 25em;
 	text-align : center;
 }
 .rares2 {
-    font-size : 7em;
+    font-size : 10em;
 	text-align : center;
 }
 .vlad2 {
-    font-size : 7em;
+    font-size : 10em;
 	text-align : center;
 }
 .wrapper {
