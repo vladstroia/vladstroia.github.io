@@ -45,13 +45,34 @@ function verifica(){
 		meci_rares += 1;	
 		serva = 0;
 	}
-
-	if((scor_vlad + scor_rares)%5 == 0 && scor_rares != 0 && scor_vlad != 0)
+	if(scor_rares >= 10 && scor_vlad >= 10)
 		serva = Math.abs(serva-1)
-}
+	else
+	    if((scor_vlad + scor_rares)%5 == 0 && scor_rares != 0 && scor_vlad != 0)
+		    serva = Math.abs(serva-1)
+    }
 function afiseaza(){
-	document.getElementById("rares").innerText=scor_rares;
-    document.getElementById("vlad").innerText=scor_vlad;
+	if(scor_rares >= 10 && scor_vlad >= 10){
+		if(scor_rares > scor_vlad){
+			document.getElementById("rares").innerText="Adv.";
+			document.getElementById("vlad").innerText="-";
+		}
+        else{
+			if(scor_vlad > scor_rares){
+				document.getElementById("rares").innerText="-";
+				document.getElementById("vlad").innerText="Adv.";
+			}
+			else{
+				document.getElementById("rares").innerText="="
+				document.getElementById("vlad").innerText="=";
+		    }
+		}
+	}
+	else{
+		document.getElementById("rares").innerText=scor_rares;
+		document.getElementById("vlad").innerText=scor_vlad;
+	}
+	
 	document.getElementById("mrares").innerText=meci_rares;
     document.getElementById("mvlad").innerText=meci_vlad;
 	if (serva == 0){
