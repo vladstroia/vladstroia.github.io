@@ -95,8 +95,8 @@ function WhichButton(event) {
   if(event.button == 0)
 	scor_rares += 1;
   else
-	if(event.button == 1||event.button == 2)
-	  scor_vlad += 1;
+		if(event.button == 1||event.button == 2)
+		  scor_vlad += 1;
   verifica();
   afiseaza();
   x.play()
