@@ -1,10 +1,14 @@
-document.addEventListener("keydown", keyDownTextField, false);
+"use strict"
 
-scor_rares = 0;
-scor_vlad = 0;
-meci_rares = 0;
-meci_vlad = 0;
-serva = 0; // cine serveste; 0 daca serveste rares; 1 daca serveste vlad
+document.addEventListener("keydown", keyDownTextField, false);
+var x = document.getElementById("myAudio"); 
+
+let scor_rares = 0;
+let scor_vlad = 0;
+let meci_rares = 0;
+let meci_vlad = 0;
+let serva = 0; // cine serveste; 0 daca serveste rares; 1 daca serveste vlad
+
 
 function verifica(){
 
@@ -95,7 +99,7 @@ function WhichButton(event) {
 	  scor_vlad += 1;
   verifica();
   afiseaza();
-
+  x.play()
 }
 
 function keyDownTextField(e) {

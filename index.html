@@ -6,10 +6,13 @@
     <script src="script.js"></script>
 	<title></title>
 </head>
-<body>
+<body onclick="playAudio()" onmousedown="WhichButton(event)">
 <script src="disable_right_click.js"></script>
+<audio id="myAudio">
+  <source src="kick.wav" type="audio/wav">
+</audio>
 	
-<div onmousedown="WhichButton(event)">
+<div>
 <div class="wrapper">
 	<!--<span class="dot"></span>-->
 
@@ -30,7 +33,13 @@
 	</div>
 </div>
 </div>
+<script>
+var x = document.getElementById("myAudio"); 
 
+function playAudio() { 
+  x.play(); 
+} 
+</script>
 
 
 
