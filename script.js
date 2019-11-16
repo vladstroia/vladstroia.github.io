@@ -52,7 +52,7 @@ function verifica(){
 	if(scor_rares >= 10 && scor_vlad >= 10)
 		serva = Math.abs(serva-1)
 	else
-	    if((scor_vlad + scor_rares)%5 == 0 && scor_rares != 0 && scor_vlad != 0)
+	    if((scor_vlad + scor_rares)%5 == 0 && (scor_rares + scor_vlad != 0))
 		    serva = Math.abs(serva-1)
     }
 function afiseaza(){
@@ -95,8 +95,8 @@ function WhichButton(event) {
   if(event.button == 0)
 	scor_rares += 1;
   else
-		if(event.button == 1||event.button == 2)
-		  scor_vlad += 1;
+	if(event.button == 1||event.button == 2)
+	  scor_vlad += 1;
   verifica();
   afiseaza();
   x.play()
@@ -119,11 +119,15 @@ function keyDownTextField(e) {
 		  }
 		  else
 			if(keyCode==74){//pentru "j"
-			  scor_rares -= 1;
+				if((scor_vlad + scor_rares)%5 == 0 && (scor_rares + scor_vlad != 0))
+					serva = Math.abs(serva-1)
+				scor_rares -= 1;
 			}
 		  else
 			if(keyCode==75){//pentru "k"
-			  scor_vlad -= 1;
+				if((scor_vlad + scor_rares)%5 == 0 && (scor_rares + scor_vlad != 0))
+					serva = Math.abs(serva-1)
+				scor_vlad -= 1;
 			}
 	verifica();
 	afiseaza();
