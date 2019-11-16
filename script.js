@@ -119,16 +119,16 @@ function keyDownTextField(e) {
 		  }
 		  else
 			if(keyCode==74){//pentru "j"
-				if((scor_vlad + scor_rares)%5 == 0 && (scor_rares + scor_vlad != 0)){
+				if((scor_vlad + scor_rares)%5 == 0 && (scor_rares + scor_vlad != 0))
 					serva = Math.abs(serva-1)
-				  scor_rares -= 1;
-			}}
+   		  scor_rares -= 1;
+			}
 		  else
 			if(keyCode==75){//pentru "k"
-				if((scor_vlad + scor_rares)%5 == 0 && (scor_rares + scor_vlad != 0)){
+				if((scor_vlad + scor_rares)%5 == 0 && (scor_rares + scor_vlad != 0))
 					serva = Math.abs(serva-1)
-				  scor_vlad -= 1;
-			}}
+			  scor_vlad -= 1;
+			}
 	verifica();
 	afiseaza();
 
